@@ -7,6 +7,9 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+def hello_world():
+    return '<h1>Hello, Flask!</h1>'
+
 
 @app.route('/first-page')
 def first_page():
