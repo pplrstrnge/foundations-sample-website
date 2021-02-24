@@ -8,4 +8,4 @@ def menu():
     return render_template('menu_template.html')
 
 if __name__ == "__main__":
-   
+    app.run(debug=True)
