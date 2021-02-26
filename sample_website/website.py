@@ -22,7 +22,7 @@ def venv():
 @app.route('/form', methods=['POST', 'GET'])
 def form():
     if request.method == 'POST':
-        What = request.form.get('what')
+        what = request.form.get('what')
         return '<h1>It is {}.' .format(what)
 
     return '''<form method="POST">
@@ -30,6 +30,6 @@ def form():
     <input type="submit">
     </form>'''
 
-    
+
 if __name__ == "__main__":
     app.run(host="localhost", port=8080, debug=True)
