@@ -11,12 +11,12 @@ def hello_world():
     return '<h1>Hello, Flask!</h1>'
 
 
-@app.route('/Coder')
-def Coder():
+@app.route('/coder')
+def coder():
     return render_template('coder.html', page_title="Coder")
 
-@app.route('/Venv')
-def Venv():
+@app.route('/venv')
+def venv():
     return render_template('venv.html', page_title="Venv")
 
 if __name__ == "__main__":
