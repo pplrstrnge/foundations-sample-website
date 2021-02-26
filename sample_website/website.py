@@ -28,7 +28,7 @@ def form():
     return '''<form method="POST">
     What? <input type="text" name="what">
     <input type="submit">
-    </form>'''
+    </form>''', render_template('form.html', page_title="Form")
 
 
 if __name__ == "__main__":
