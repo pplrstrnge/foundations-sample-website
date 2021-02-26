@@ -21,17 +21,14 @@ def venv():
 
 @app.route('/form', methods=['POST', 'GET'])
 def form():
-     return render_template('form.html', page_title="Form")
-     
-def what():
     if request.method == 'POST':
         what = request.form.get('what')
-        return '<h1>It is {}.' .format(what)
+        return '<h1>It is {}.' .format(what), render_template('form.html', page_title="Form")
 
     return '''<form method="POST">
     What? <input type="text" name="what">
     <input type="submit">
-    </form>'''
+    </form>''', render_template('form.html', page_title="Form")
 
 
 if __name__ == "__main__":
