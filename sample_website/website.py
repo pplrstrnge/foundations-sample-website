@@ -23,12 +23,9 @@ def venv():
 def form():
     if request.method == 'POST':
         what = request.form.get('what')
-        return '<h1>It is {}.</h1>' .format(what), render_template('form.html', page_title="Form")
+        return '<h1>It is {}. <a href="/form">Back</a></h1>' .format(what)
 
-    return '''<form method="POST">
-    What? <input type="text" name="what">
-    <input type="submit">
-    </form>''', render_template('form.html', page_title="Form")
+    return render_template('form.html', page_title="Form")
 
 
 if __name__ == "__main__":
