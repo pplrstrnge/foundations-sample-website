@@ -15,9 +15,9 @@ def hello_world():
 def coder():
     return render_template('coder.html', page_title="Coder")
 
-@app.route('/venv')
+@app.route('/picture')
 def venv():
-    return render_template('venv.html', page_title="Venv")
+    return render_template('picture.html', page_title="Picture")
 
 @app.route('/form', methods=['POST', 'GET'])
 def form():
