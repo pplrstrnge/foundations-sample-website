@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import render_template
+from flask import render_template, request
 app = Flask(__name__)
 
 
@@ -19,5 +19,17 @@ def coder():
 def venv():
     return render_template('venv.html', page_title="Venv")
 
+@app.route('/form', methods=['POST', 'GET'])
+def form():
+    if request.method == 'POST':
+        What = request.form.get('what')
+        return '<h1>It is {}.' .format(what)
+
+    return '''<form method="POST">
+    What? <input type="text" name="what">
+    <input type="submit">
+    </form>'''
+
+    
 if __name__ == "__main__":
     app.run(host="localhost", port=8080, debug=True)
