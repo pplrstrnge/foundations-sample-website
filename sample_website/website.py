@@ -21,7 +21,8 @@ def venv():
 
 @app.route('/form', methods=['POST', 'GET'])
 def form():
-     return render_template('form.html', page_title="Form"
+     return render_template('form.html', page_title="Form")
+     
 def what():
     if request.method == 'POST':
         what = request.form.get('what')
