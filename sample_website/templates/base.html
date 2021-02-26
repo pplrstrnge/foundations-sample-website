@@ -4,19 +4,20 @@
     <title> {{ page_title }}</title>
   	<meta charset="utf-8"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!DOCTYPE html>
+<ul class="ul">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
   </head>
-  <body>
-
-
   <header>
     <div class="banner">
       <h1> Way to CODE </h1> 
       <h3> A really great place. </h3>
     </div>
   </header>
-
-  <!-- This is the part which will be different on each page. 
-       see first-page.html for an example of using it -->
   <main>
     {% block content%}
     {% endblock %}
@@ -24,4 +25,4 @@
   <footer>
     <h3> Made with love </h3>
   </footer>
-  </body>
+ 
