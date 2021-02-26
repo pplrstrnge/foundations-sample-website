@@ -1,6 +1,32 @@
 {% extends "base.html" %}
 
 {% block content %}
-<img src="{{ url_for('static', filename='codeuniversity.jpg') }}" />   
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pulvinar iaculis diam in euismod. Praesent egestas eget mauris nec blandit. Aenean sed eros quis orci sagittis luctus ac id dolor. Cras ullamcorper ante vitae dui feugiat ornare. Praesent ipsum tortor, luctus eget lacinia non, sagittis non arcu. Morbi pretium nibh sollicitudin enim luctus, vel convallis nunc condimentum. Sed vulputate eu mauris vitae aliquet. Praesent mollis, ligula non ultricies malesuada, orci diam ullamcorper odio, a porttitor odio leo vitae urna. Phasellus egestas ac purus non iaculis. Sed a rhoncus neque, at sollicitudin est. Phasellus facilisis sit amet nisi at interdum. Praesent posuere pharetra lectus, rhoncus convallis ante ultricies in. </p>
+<div class="container">
+    <div style="text-align:center">
+      <h2>Contact Us</h2>
+      <p>Swing by for a cup of coffee, or leave us a message:</p>
+    </div>
+    <div class="row">
+      <div class="column">
+        <img src="/w3images/map.jpg" style="width:100%">
+      </div>
+      <div class="column">
+        <form action="/action_page.php">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
 {% endblock %}
