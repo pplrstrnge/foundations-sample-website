@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <!DOCTYPE html>
 <ul class="menu_ul" class="ul">
-  <li class="menu_li"><a class="menu_a" href="index.html">CODE</a></li>
-  <li class="menu_li"><a class="menu_a" href="first-page.html">CODER</a></li>
-  <li class="menu_li"><a class="menu_a" href="second-page.html">VENV</a></li>
+  <li class="menu_li"><a class="menu_a" href="{{ url_for('code') }}code">CODE</a></li>
+  <li class="menu_li"><a class="menu_a" href="{{ url_for('coder') }}coder">CODER</a></li>
+  <li class="menu_li"><a class="menu_a" href="{{ url_for('venv') }}">VENV</a></li>
 </ul>
   </head>
   <header>
     <div class="banner">
-      <h1> Way to CODE </h1> 
+      <h1> {{ page_title }} </h1> 
       <h3> A really great place. </h3>
     </div>
   </header>
