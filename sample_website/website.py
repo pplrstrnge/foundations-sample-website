@@ -4,19 +4,19 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def index():
+def Code():
     return render_template('code.html', page_title="Code")
 
 def hello_world():
     return '<h1>Hello, Flask!</h1>'
 
 
-@app.route('/first-page')
-def first_page():
+@app.route('/Coder')
+def Coder():
     return render_template('coder.html', page_title="Coder")
 
-@app.route('/second-page')
-def second_page():
+@app.route('/Venv')
+def Venv():
     return render_template('venv.html', page_title="Venv")
 
 if __name__ == "__main__":
