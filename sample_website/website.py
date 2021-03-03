@@ -8,7 +8,7 @@ def Code():
     return render_template('code.html', page_title="Code")
 
 def hello_world():
-    return '<h1>Hello, Flask!</h1>'
+    return '<h1>Hello, Class!</h1>'
 
 
 @app.route('/coder')
