@@ -11,9 +11,10 @@
 # from your .gitignore file, remove the corresponding line
 # below:
 .git
-.gitignore
+
 
 # Python pycache:
 __pycache__/
 # Ignored by the build system
 /setup.cfg
+virtenv/

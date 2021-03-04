@@ -1,4 +1,4 @@
-venv/*
+virtenv/*
 .vscode/*
 __pycache__/
 .pytest_cache/
