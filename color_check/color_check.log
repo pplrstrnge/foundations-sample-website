@@ -1,0 +1,17 @@
+2021-03-04 10:48:26,506 - ERROR - Exception on /color [POST]
+Traceback (most recent call last):
+  File "/Users/can/coding enviorment/foundations sample website/Cans-foundations-sample-website/virtenv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/can/coding enviorment/foundations sample website/Cans-foundations-sample-website/virtenv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/can/coding enviorment/foundations sample website/Cans-foundations-sample-website/virtenv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/can/coding enviorment/foundations sample website/Cans-foundations-sample-website/virtenv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/can/coding enviorment/foundations sample website/Cans-foundations-sample-website/virtenv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/can/coding enviorment/foundations sample website/Cans-foundations-sample-website/virtenv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "color_check/website.py", line 29, in show_color
+    logging.info('Form entry: %s', color_name)
+NameError: name 'color_name' is not defined
