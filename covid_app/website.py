@@ -45,7 +45,7 @@ def create_meeting():
         # app.logger.info(name)
         # turn this into an SQL command. For example:
         # "Adam" --> "INSERT INTO Meetings (name) VALUES("Adam");"
-        sql_insert = "INSERT INTO Meetings (name) VALUES (\"{name}\");".format(
+        sql_insert = "INSERT INTO Meetings (name, date) VALUES (\"{name}\", datetime('now', 'localtime'));".format(
             name=name)
 
         # connect to the database with the filename configured above

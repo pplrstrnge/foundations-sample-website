@@ -5,18 +5,26 @@
     </p>    
     
     <!-- when the user submits this form, it will send the information submitted from the client (frontend)
-    to the server (backend). It will send that infromation to a particular URI, at "/color". 
+    to the server (backend). It will send that infromation to a particular URI, at "/create". 
     Your server will then run the code which is defined in website.py at that route. -->
 
     <form action="/create" method="post">
         <!-- add the contents of your form here -->
-        <label for="name"> Today I met: </label>
+        <label for="name"> I met: </label>
         <input type="text" name="name" id="name" required>
         <input type="submit" value="Submit">
     </form>
 
     <p> So far, I have met...
-        {{meetings}}
+        <!--{{meetings}}-->
+        <table>
+            {% for item in meetings %}
+                <tr>
+                    <td>{{item[0]}}</td>
+                    <td>{{item[1]}}</td>
+                </tr>
+            {% endfor %}
+            </table>
     </p>
 
 
